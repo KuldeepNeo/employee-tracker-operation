@@ -1,0 +1,322 @@
+.tableWrapper {
+  width: 100%;
+  overflow-x: auto;
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-default);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.headerRow {
+  background-color: var(--color-surface-container-low);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.th {
+  padding: 12px var(--spacing-lg);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  letter-spacing: 0.05em;
+  height: 40px;
+}
+
+.row {
+  border-bottom: 1px solid var(--color-border-subtle);
+  height: 48px;
+  transition: background-color 0.15s ease;
+}
+
+.row:hover {
+  background-color: var(--color-surface-container-lowest);
+}
+
+.td {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  vertical-align: middle;
+}
+
+.nameContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.initialsCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.initialsPrimary {
+  background-color: rgba(30, 58, 138, 0.08);
+  color: var(--color-primary);
+}
+
+.initialsSecondary {
+  background-color: rgba(81, 95, 116, 0.12);
+  color: var(--color-secondary);
+}
+
+.nameText {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.tdId {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  vertical-align: middle;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+.tdOnSurface {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  vertical-align: middle;
+  font-size: 14px;
+  color: var(--color-on-surface);
+}
+
+.tdRole {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  vertical-align: middle;
+  font-size: 14px;
+  color: var(--color-secondary);
+}
+
+/* Status Badges */
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  line-height: 1;
+}
+
+.statusActive {
+  background-color: rgba(22, 163, 74, 0.1);
+  color: var(--color-status-success);
+  border: 1px solid rgba(22, 163, 74, 0.2);
+}
+
+.statusLeave {
+  background-color: rgba(234, 88, 12, 0.1);
+  color: var(--color-status-warning);
+  border: 1px solid rgba(234, 88, 12, 0.2);
+}
+
+/* Actions */
+.actionsCell {
+  text-align: right;
+  height: 48px;
+}
+
+.actionsHeader {
+  text-align: right;
+}
+
+.portalActions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+}
+
+.portalEditBtn {
+  background-color: var(--color-surface-container-low);
+  color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-default);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  height: 28px;
+}
+
+.portalEditBtn:hover {
+  background-color: rgba(0, 35, 111, 0.1);
+}
+
+.portalDeleteBtn {
+  background-color: rgba(220, 38, 38, 0.1);
+  color: var(--color-status-error);
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-default);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+  height: 28px;
+}
+
+.portalDeleteBtn:hover {
+  background-color: rgba(220, 38, 38, 0.2);
+}
+
+/* Dashboard Hover Actions */
+.dashboardTable .row {
+  position: relative;
+}
+
+.dashboardRow:hover {
+  background-color: var(--color-surface-container-low);
+}
+
+.dashboardActions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dashboardRow:hover .dashboardActions {
+  opacity: 1;
+}
+
+.dashboardEditBtn, .dashboardDeleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: var(--radius-default);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  transition: background-color 0.2s;
+}
+
+.dashboardEditBtn {
+  color: var(--color-secondary);
+}
+
+.dashboardEditBtn:hover {
+  background-color: var(--color-surface-container-high);
+}
+
+.dashboardDeleteBtn {
+  color: var(--color-status-error);
+}
+
+.dashboardDeleteBtn:hover {
+  background-color: var(--color-error-container);
+}
+
+/* Empty State */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px var(--spacing-xl);
+  text-align: center;
+}
+
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: var(--spacing-md) 0 var(--spacing-xs) 0;
+  color: var(--color-on-surface);
+}
+
+.emptyText {
+  color: var(--color-secondary);
+  max-width: 320px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Mobile Responsive */
+.mobileCards {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.mobileCard {
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-default);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.cardTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.cardSubtitle {
+  font-size: 12px;
+  color: var(--color-secondary);
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  font-size: 13px;
+  color: var(--color-on-surface-variant);
+}
+
+.cardMetaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--spacing-sm);
+  border-top: 1px solid var(--color-border-subtle);
+  padding-top: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+  .tableWrapper {
+    display: none;
+  }
+  .mobileCards {
+    display: flex;
+  }
+}
